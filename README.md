@@ -16,6 +16,8 @@ To get started, follow these steps:
 
 After installing the dependencies, you can run the development server using the following command:
 
+- `npm run dev`.
+
 This will start the development server and open the application in your default web browser. Any changes you make to the source code will automatically be reflected in the browser.
 
 ## Building for Production
