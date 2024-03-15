@@ -1,0 +1,212 @@
+// Define variables for commonly used values
+$font-primary: 'Roboto', sans-serif;
+$background-color-light: #fefefe;
+$background-color-highlight: #f9f9f9;
+$border-color-soft: #ddd;
+$star-color: rgb(255, 174, 0);
+$text-color: black;
+$font-size-large: 24px;
+$font-size-medium: 18px;
+$font-size-small: 16px;
+$font-size-extra-small: 12px;
+$circle-radius: 100%;
+$transition-duration: 0.3s;
+$padding-standard: 10px;
+$margin-standard: 10px;
+$gap-small: 10px;
+$gap-large: 20px;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.row, .column {
+    display: flex;
+    &.gap {
+        gap: $gap-small;
+    }
+}
+
+.column {
+    flex-direction: column;
+    &.center {
+        justify-content: center;
+    }
+}
+  
+body {
+    font-family: $font-primary;
+    width: 100vw;
+    height: 100vh;
+    background-color: $background-color-light;
+    display: flex;
+    justify-content: center;
+}
+  
+.main-container {
+    padding: 2 * $padding-standard;
+    color: $text-color;
+    font-size: $font-size-large;
+    width:100vw;
+    max-width: 900px;
+
+    .title {
+        padding: $padding-standard 0 0 $padding-standard;
+        font-weight: 700;
+    }
+}
+  
+.reviews-container {
+    background-color: white;
+    color: $text-color;
+    display: flex;
+    flex-direction: column;
+    gap: $gap-large;
+    text-align: start;
+  
+    .review {
+        border-bottom: 1px solid $border-color-soft;
+        padding: $padding-standard;
+        display: flex;
+        flex-direction: column;
+        gap: $gap-large;
+        transition: background-color $transition-duration ease;
+
+      
+        button {
+          border: none;
+          background: none;
+          cursor: pointer;
+          
+          
+          &.delete-btn { color: rgb(195, 29, 29); display: none;}
+          &.edit-btn { color: rgb(22, 22, 173); display: none;}
+      }
+
+      &:hover {
+        .delete-btn { color: rgb(195, 29, 29);display:flex }
+        .edit-btn { color: rgb(22, 22, 173);display:flex }
+      }
+        .review-date {
+            font-size: $font-size-extra-small;
+        }
+
+        .review-header {
+            display: flex;
+            align-items: center;
+            gap: $gap-small;
+            justify-content: space-between;
+
+            @media (max-width: 768px) {
+                flex-direction: column;
+                align-items: flex-start;
+                justify-content: center;
+            }
+        }
+
+        
+
+        .review-footer {
+            display: flex;
+            align-items: center;
+            gap: 2 * $gap-small;
+            justify-content: flex-end;
+            height: $padding-standard;
+            
+         
+
+            
+        }
+
+        .review-name {
+            font-size: $font-size-medium;
+            font-weight: 500;
+        }
+
+        .review-review {
+            font-size: $font-size-small;
+            flex: 1;
+        }
+
+        .review-stars {
+            justify-self: end;
+            color: $star-color;
+        }
+
+        img {
+            width: 50px;
+            height: 50px;
+            border-radius: $circle-radius;
+            object-fit: cover;
+        }
+    }
+}
+  
+
+
+  .review-form {
+    display: flex;
+    flex-direction: column;
+    border-radius: 8px;
+    font-size: 14px;
+  
+    label {
+      margin-top: 10px;
+      margin-bottom: 5px;
+      font-size: 12px;
+      font-weight: bold;
+
+      &.error {
+        color:red;
+      }
+    }
+  
+    input[type="text"],
+    #name,
+    textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      &:focus {
+        border-color: #007bff;
+        outline: none;
+      }
+    }
+  
+    textarea {
+      resize: vertical;
+      min-height: 100px;
+    }
+  
+    .star-rating {
+        display:flex;
+        color:orange;
+        font-size: 24px;
+    }
+  
+    button[type="submit"] {
+      width: auto;
+      padding: 10px 20px;
+      margin-top: 15px;
+      border: none;
+      border-radius: 4px;
+      background-color: #007bff;
+      color: white;
+      cursor: pointer;
+      align-self: flex-start;
+  
+      &:hover {
+        background-color: #0056b3;
+      }
+    }
+  
+    p {
+      color: red;
+      font-size: 0.9rem;
+    }
+  }
+  
