@@ -1,30 +1,35 @@
-# React + TypeScript + Vite
+# React TypeScript Vite Application
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a React TypeScript application bootstrapped with Vite.
 
-Currently, two official plugins are available:
+## Getting Started
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+To get started, follow these steps:
 
-## Expanding the ESLint configuration
+1. Clone this repository to your local machine.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+2. Navigate to the project directory in your terminal.
 
-- Configure the top-level `parserOptions` property like this:
+3. Install dependencies using npm:
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
+## Running the Development Server
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+After installing the dependencies, you can run the development server using the following command:
+
+This will start the development server and open the application in your default web browser. Any changes you make to the source code will automatically be reflected in the browser.
+
+## Building for Production
+
+To build the application for production, you can use the following command:
+
+This will generate a production-ready build of your application in the `dist` directory.
+
+## Additional Commands
+
+- `npm run serve`: Serve the production build locally.
+- `npm run lint`: Run ESLint to lint your code.
+- `npm run test`: Run tests.
+
+## Folder Structure
+
+The project structure is as follows:
